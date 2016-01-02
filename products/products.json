@@ -1,0 +1,34 @@
+[
+   {
+      "id": 3325038,
+      "name": "iPad Mini",
+      "description": "The most advanced iPad Mini is loaded with cool features!",
+      "price": 249.99,
+      "buy_url": "http://www.bestbuy.com/site/apple-ipad-mini-4-wi-fi-16gb-silver/4266101.p?id=1219731741446&skuId=4266101",
+      "image_url": "http://cdn.mos.techradar.com/art/tablets/iPad/iPadMini/Press/iPadMini-Press-02-970-80.jpg"
+   },
+   {
+      "id": 4523500,
+      "name": "Microsoft Surface",
+      "description": "The biggest pile of crap money can buy!",
+      "price": 799.99,
+      "buy_url": "http://www.bestbuy.com/site/microsoft-surface-pro-4-12-3-128gb-intel-core-i5-silver/4523600.p?id=1219756882723&skuId=4523600",
+      "image_url": "http://images.en.yibada.com/data/images/full/48319/microsoft-surface-pro-4-to-counter-12-inch-ipad-pro.jpg"
+   },
+   {
+      "id": 8998506,
+      "name": "NETGEAR",
+      "description": "Share, stream and access stored media across your network. Backward compatibility with 802.11 b/g networks means your old devices won't be left behind.",
+      "price": 39.99,
+      "buy_url": "http://www.bestbuy.com/site/netgear-wireless-n-router-black/8998506.p?id=1218007383662&skuId=8998506",
+      "image_url": "http://www.netgear.com/images/Products/Networking/WirelessRouters/WNR3500L/header-wnr3500l-standing-photo-large.png"
+   },
+   {
+      "id": "3405993",
+      "name": "Dell Inspiron PC",
+      "description": "I take that back, this is the biggest pile of crap money can buy!",
+      "price": "899.99",
+      "buy_url": "http://www.bestbuy.com/site/dell-inspiron-14-laptop-intel-celeron-2gb-memory-32gb-emmc-flash-memory-black/4344000.p?id=1219734729526&skuId=4344000",
+      "image_url": "http://www.notebookcheck.net/fileadmin/_migrated/pics/dell_inspiron_1318_05.jpg"
+   }
+]

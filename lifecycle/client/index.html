@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My First Component</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <script src="https://fb.me/react-0.14.3.js"></script>
+  <script src="https://fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
+</head>
+<body>
+  <div id="container"></div>
+  <script type="text/babel">
+  var MyComponent = React.createClass({
+    getDefaultProps: function () {
+      console.log('invoking getDefaultProps');
+      return {
+        myProp: 'foo'
+      };
+    },
+    getInitialState: function () {
+      console.log('invoking get initial state');
+      return null;
+    },
+    componentWillMount: function () {
+      console.log('invoking component will mount');
+    },
+    componentDidMount: function () {
+      console.log('invoking component did mount');
+    },
+    render: function () {
+      console.log('Invoking render');
+      return (
+        <div>
+          <h1>{this.props.myProp}</h1>
+          <button onClick={this.changeProp}>Change Property</button>
+          <button onClick={this.removeHandler}>Unmount</button>
+        </div>
+      )
+    },
+    componentWillReceiveProps: function () {
+      console.log('invoking the component will receive props');
+    },
+    shouldComponentUpdate: function () {
+      console.log('invoking should compenent update');
+      return true;
+    },
+    componentWillUpdate: function () {
+      console.log('invoking component will update');
+    },
+    componentDidUpdate: function () {
+      console.log('invoking the component did update');
+    },
+    componentWillUnmount: function () {
+      console.log('invoking component will unmount');
+    },
+    changeProp: function () {
+      this.setProps({myProp: 'bar'});
+    },
+    removeHandler: function () {
+      ReactDOM.unmountComponentAtNode(document.getElementById('container'));
+    }
+  });
+  ReactDOM.render(<MyComponent />, document.getElementById('container'));
+  </script>
+</body>
+</html>

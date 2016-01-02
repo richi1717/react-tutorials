@@ -1,0 +1,30 @@
+{
+  "name": "reactserver",
+  "version": "1.0.0",
+  "description": "simple web server",
+  "main": "server.js",
+  "dependencies": {
+    "babel": "^6.3.26",
+    "babel-register": "^6.3.13",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Richi Jeffery",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-register": "^6.3.13",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  }
+}
