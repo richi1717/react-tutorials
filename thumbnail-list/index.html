@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First-App</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://fb.me/JSXTransformer-0.12.2.js"></script>
+  <style>
+  img {
+    width: 50%;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 target"></div>
+    </div>
+  </div>
+</body>
+<script type="text/jsx">
+  // Define a react component class
+  var Badge = React.createClass({
+    render: function () {
+
+      return <button className="btn btn-primary" type="button">
+        {this.props.title} <span className="badge">{this.props.number}</span>
+      </button>
+    }
+  });
+
+  var Thumbnail = React.createClass({
+    render: function () {
+      return <div className="col-sm-6 col-md-4"> 
+        <div className="thumbnail">
+          <div className="caption">
+            <img src={this.props.imageUrl} />
+            <h3>{this.props.header}</h3>
+            <p>{this.props.description}</p>
+            <p>
+              <Badge title={this.props.title} number={this.props.number} />
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  });
+
+  var ThumbnailList = React.createClass({
+    render: function () {
+      var list = this.props.thumbnailData.map(function (thumbnailProps) {
+        return <Thumbnail {...thumbnailProps} />
+      });
+
+      return <div>
+        {list}
+      </div>
+    }
+  });
+
+  var options = {
+    thumbnailData: [{
+      title: 'See Tutorials',
+      number: 32,
+      imageUrl: 'http://formatjs.io/img/react.svg',
+      description: 'React is awesome, fast, and dynamic!',
+      header: 'Learn React'
+    }, 
+    {
+      title: 'See Tutorials',
+      number: 25,
+      imageUrl: 'http://brunch.io/images/others/gulp.png',
+      description: 'Gulp will speed up your development workflow',
+      header: 'Learn Gulp'
+    }]
+  };
+
+  // Ask react to render this class
+  var element = React.createElement(ThumbnailList, options);
+  
+  // When we ask react to render this class, we will tell
+  // it where to place the rendered element in the dom
+  ReactDOM.render(element, document.querySelector('.target'))
+
+
+</script>
+</html>
+
