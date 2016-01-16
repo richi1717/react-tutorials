@@ -3,14 +3,14 @@ var ThumbnailList = require('./thumbnail-list');
 
 var options = {
   thumbnailData: [{
-    title: 'See Tutorials',
+    title: 'left',
     number: 32,
     imageUrl: 'http://formatjs.io/img/react.svg',
     description: 'React is awesome, fast, and dynamic!',
     header: 'Learn React'
   },
   {
-    title: 'See Tutorials',
+    title: 'right',
     number: 25,
     imageUrl: 'http://brunch.io/images/others/gulp.png',
     description: 'Gulp will speed up your development workflow',
