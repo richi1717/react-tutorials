@@ -14,11 +14,9 @@ module.exports = React.createClass({
       </h4>
     } else {
       var children = [];
-      console.log('happen');
       for (var key in this.props.items) {
         var item = this.props.items[key];
         item.key = key;
-        console.log(item);
         children.push(
           <ListItem
             item={item}
