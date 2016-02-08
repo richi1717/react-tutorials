@@ -1,0 +1,16 @@
+var Badge = require('./badge');
+
+render: function () {
+  var visible;
+
+  if (//dropdown should be open) {
+    visible = "visible";
+  } else {
+    visible = "hidden";
+  }
+
+  return <div className="dropdown">
+    <Badge />
+    <UnorderedList />
+  </div>
+}

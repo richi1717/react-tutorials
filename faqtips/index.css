@@ -1,0 +1,15 @@
+#container {
+    margin: 0 auto;
+    padding: 50px;
+}
+#container a {
+    text-align: center;
+    cursor: pointer;
+    font-size: 50px;
+    color: blue;
+}
+#container p {
+    text-align: center;
+    font-size: 50px;
+    color: #888;
+}
